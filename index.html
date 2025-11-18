@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavender Bakes – Booking</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>Lavender Bakes</h1>
+    <p class="subtitle">Place your order and we'll start baking!</p>
+
+    <!-- Optional logo image — I will insert it once generated -->
+    <div class="logo-area">
+        <img id="logo" src="logo-placeholder.png" alt="Bakery Logo">
+    </div>
+
+    <form class="booking-form" method="POST" action="send.php">
+        
+        <h2>Customer Information</h2>
+        <label>Full Name</label>
+        <input name="name" type="text" required>
+
+        <label>Email Address</label>
+        <input name="email" type="email" required>
+
+        <label>Phone Number</label>
+        <input name="phone" type="tel" required>
+
+        <h2>Order Details</h2>
+
+        <label>Order Type</label>
+        <select name="order_type" required>
+            <option value="">Select an option</option>
+            <option>Custom Cake</option>
+            <option>Pastry / Bread Pre-order</option>
+            <option>Catering</option>
+        </select>
+
+        <label>Product / Flavor</label>
+        <input name="product" type="text" required>
+
+        <label>Quantity</label>
+        <input name="quantity" type="number" min="1" required>
+
+        <label>Pickup / Delivery Date</label>
+        <input name="date" type="date" required>
+
+        <label>Time</label>
+        <input name="time" type="time" required>
+
+        <label>Customization (optional)</label>
+        <textarea name="customization"></textarea>
+
+        <h2>Policies</h2>
+        <p class="policy-text">
+            • Orders must be placed 48 hours in advance.  
+            • No refunds for custom cakes once baking has started.  
+            • Please inform us of allergy concerns — we offer allergy-friendly options when possible.
+        </p>
+
+        <label class="checkbox">
+            <input type="checkbox" required>
+            I agree to the terms and conditions.
+        </label>
+
+        <button type="submit">Submit Booking</button>
+
+    </form>
+</div>
+
+</body>
+</html>
 
